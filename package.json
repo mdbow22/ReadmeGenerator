@@ -1,0 +1,22 @@
+{
+  "name": "readmegenerator",
+  "version": "1.0.0",
+  "description": "JS App that helps create a readme in markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdbow22/ReadmeGenerator.git"
+  },
+  "author": "Matt Bow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdbow22/ReadmeGenerator/issues"
+  },
+  "homepage": "https://github.com/mdbow22/ReadmeGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.5"
+  }
+}
