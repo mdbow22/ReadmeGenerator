@@ -22,3 +22,4 @@ Please send any questions to me through github: https://github.com/mdbow22.
 
 Here is a link to a video walkthrough of the functionality of the app:
 
+https://drive.google.com/file/d/1qhxhNBCpaS1lC8HRTcZJwQFNaOzhA8e1/view
