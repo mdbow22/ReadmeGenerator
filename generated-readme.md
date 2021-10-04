@@ -1,8 +1,8 @@
-# sdf
+# The Dude Generator
 
 ## Description
 
-sdf
+A small app that will auto generate quotes of the Dude from The Big Lebowski.
 
 ## Table of Contents
 
@@ -15,27 +15,27 @@ sdf
 
 ## <a name="installation"></a>Installation
 
-dsf
+Installed through npm, by choosing npm install theDude
 
 ## <a name="usage"></a>Usage
 
-sdf
+Can be used as lorem ipsum style text for filler content on a site when no copy is available.
 
 ## <a name="license"></a>License
 
-MIT License: Users can use, copy, modify, merge, publish, and distribute this programming as long as they include this license within their project.
+GPL License: Users can use, copy, modify, etc this programming so as long as the source code is freely available and their users are given the same rights
 
 ## <a name="contributing"></a>Contributing
 
-sdf
+As of now contributions are not allowed.
 
 ## <a name="tests"></a>Tests
 
-sdf
+run npm tests to test the app in your local environment
 
 ## <a name="questions"></a>Questions
 
-For any questions you can reach out either via github or email at the following:
+For any questions you can reach out via github or email at the following:
 
-- Github: https://github.com/sdf
-- Email: sdf@gmail.com
+- Github: https://github.com/mdbow22
+- Email: mdbow22@gmail.com

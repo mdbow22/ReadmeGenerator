@@ -1,11 +1,14 @@
+//Required dependencies
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
+//Have fs.writeFile work asynchronously
 const writeFileAsync = util.promisify(fs.writeFile);
 
 let createMD = (answers) => {
     let license;
+    //Switch statement to determine which License user chose and add in correct description
     switch (answers.license) {
         case 'MIT License':
             license = 'MIT License: Users can use, copy, modify, merge, publish, and distribute this programming as long as they include this license within their project.';
@@ -23,6 +26,7 @@ let createMD = (answers) => {
             license = 'There is no license associated with this app.';
     }
 
+//Markdown that will populate the readme file.
 return `# ${answers.title}
 
 ## Description
@@ -60,12 +64,13 @@ ${answers.tests}
 
 ## <a name="questions"></a>Questions
 
-For any questions you can reach out either via github or email at the following:
+For any questions you can reach out via github or email at the following:
 
 - Github: https://github.com/${answers.githubProfile}
 - Email: ${answers.email}`;
 };
 
+//Prompts for user to create readme file
 let askQuestions = () => {
     const questions = [
         {
@@ -117,6 +122,7 @@ let askQuestions = () => {
             type: 'input',
             name: 'email',
             message: 'What email can be contact you at with questions?',
+            //Validation of email to make sure it has at least an @ symbol.
             validate(val) {
                 for(let i = 0; i < val.length; i++) {
                     if(val[i] === '@') {
@@ -128,14 +134,19 @@ let askQuestions = () => {
         }
     ];
 
+    //Initiate prompts in command line
     inquirer.prompt(questions)
+        //once prompts are finished, write markdown to readme file
         .then((answers) => writeFileAsync('generated-readme.md', createMD(answers)))
-        .then(() => console.log('Successfully wrote to index.html'))
+        //if it worked, log to console success
+        .then(() => console.log('Successfully wrote to generated-readme.md'))
+        //log error to console if something went wrong.
         .catch((err) => console.error(err));
 }
 
 let init = () => {
     console.log('Let\'s create a readme file!');
+    //Begin prompts to user.
     askQuestions();
 }
 
